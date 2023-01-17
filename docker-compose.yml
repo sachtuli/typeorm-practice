@@ -1,0 +1,20 @@
+version: "3"
+services:
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+      - POSTGRES_DB
+    ports:
+      - "5433:5432"
+    volumes:
+      - typeorm:/var/lib/postgresql/data
+    networks:
+      - typeorm_practice
+volumes:
+  typeorm:
+networks: 
+  typeorm_practice: 
+    external: 
+      name: typeorm_practice
