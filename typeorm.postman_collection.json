@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "32f8363f-75e4-4bda-9d3c-f43914f69e7b",
+		"name": "typeorm",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "to create a new client",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Hardik\",\r\n    \"lastName\": \"Pandya\",\r\n    \"email\": \"hpp143@gmail.com\",\r\n    \"cardNumber\": \"1333887768\",\r\n    \"balance\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/client",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "to create a new Banker",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Ashwani\",\r\n    \"lastName\": \"Tuli\",\r\n    \"email\": \"akt@gmail.com\",\r\n    \"cardNumber\": \"1333885419\",\r\n    \"employeeNumber\": 228341\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/banker",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"banker"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "to commit a transaction ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": \"deposit\",\r\n    \"amount\": 25000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/client/4/transaction",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"client",
+						"4",
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "connect client to banker",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/banker/3/client/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"banker",
+						"3",
+						"client",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "To delete a Client",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/client/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"client",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "to fetch client balance and transactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/clients/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clients",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
